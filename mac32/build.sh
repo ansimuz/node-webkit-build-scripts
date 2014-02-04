@@ -6,7 +6,7 @@ source ../settings.sh
 
 NODE_WEBKIT="node-webkit.app"
 NW_FILE=$1
-DIST_DIR="../$DIST_DIR"
+DIST_DIR="../$DIST_DIR/mac"
 
 if [[ -z "$NW_FILE"  ]]
 then
@@ -14,7 +14,7 @@ then
   exit 1
 fi  
 
-[ ! -d $DIST_DIR  ] && mkdir $DIST_DIR
+[ ! -d $DIST_DIR  ] && mkdir -p $DIST_DIR
 
 cp -rf $NODE_WEBKIT $CACHE_DIR
 unzip -o $NW_FILE -d $CACHE_DIR/Contents/Resources/app.nw
