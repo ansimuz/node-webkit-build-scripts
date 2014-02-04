@@ -2,11 +2,17 @@
 
 # Mac OS X Build.sh
 
+source ../settings.sh
+
 NODE_WEBKIT="node-webkit.app"
-APP_NAME="myApp"
 NW_FILE=$1
-CACHE_DIR=".cache"
-DIST_DIR="../dist"
+DIST_DIR="../$DIST_DIR"
+
+if [[ -z "$NW_FILE"  ]]
+then
+  echo "Missing nw package"
+  exit 1
+fi  
 
 [ ! -d $DIST_DIR  ] && mkdir $DIST_DIR
 
