@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Mac OS X Build.sh
+# Linux 64 Build.sh
 
 source ../settings.sh
 
 NODE_WEBKIT="node-webkit"
 NW_FILE=$1
-DIST_DIR="../$DIST_DIR/linux32"
+DIST_DIR="../$DIST_DIR/linux64"
 
 if [[ -z "$NW_FILE"  ]]
 then
@@ -23,4 +23,4 @@ cp $NODE_WEBKIT/nw.pak $CACHE_DIR
 rm -rf $DIST_DIR/$APP_NAME
 mv $CACHE_DIR $DIST_DIR/$APP_NAME
 
-echo "Linux 32 Build finished -> $DIST_DIR/$APP_NAME"
+echo "Linux 64 Build finished -> $DIST_DIR/$APP_NAME"
