@@ -17,9 +17,10 @@ fi
 [ ! -d $DIST_DIR ] && mkdir -p $DIST_DIR
 
 mkdir $CACHE_DIR
-cat $NODE_WEBKIT/nw.exe $NW_FILE > $CACHE_DIR/app.exe
+cat $NODE_WEBKIT/nw.exe $NW_FILE > $CACHE_DIR/$APP_NAME.exe
 cp $NODE_WEBKIT/*.dll $CACHE_DIR
 cp $NODE_WEBKIT/nw.pak $CACHE_DIR
+rm -rf $DIST_DIR/$APP_NAME
 mv $CACHE_DIR $DIST_DIR/$APP_NAME
 
 echo "Windows 32 Build finished -> $DIST_DIR/$APP_NAME"
