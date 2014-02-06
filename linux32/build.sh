@@ -22,6 +22,7 @@ cp $NODE_WEBKIT/*.so $CACHE_DIR
 cp $NODE_WEBKIT/nw.pak $CACHE_DIR
 cp wrapper.sh $CACHE_DIR/run.sh
 cp libudev.so.0 $CACHE_DIR/
+chmod +x $CACHE_DIR/$APP_NAME
 chmod +x $CACHE_DIR/run.sh
 rm -rf $DIST_DIR/$APP_NAME
 mv $CACHE_DIR $DIST_DIR/$APP_NAME
